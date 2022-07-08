@@ -25,6 +25,7 @@ import (
 
 const gaURL = "https://www.google-analytics.com/collect"
 
+var Enabled bool
 var gacodeRegexp = regexp.MustCompile(`^UA-\d+-\d+$`)
 
 // Event is a GA event.

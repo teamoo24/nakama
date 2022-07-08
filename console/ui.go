@@ -16,6 +16,7 @@ package console
 
 import (
 	"embed"
+	"github.com/heroiclabs/nakama/v3/ga"
 	"io/fs"
 	"net/http"
 	"path"
@@ -28,7 +29,11 @@ var UIFS = &uiFS{}
 type uiFS struct{}
 
 func (fs *uiFS) Open(name string) (fs.File, error) {
-	return embedFS.Open(path.Join("ui", "dist", name))
+	if ga.Enabled {
+		return embedFS.Open(path.Join("ui", "dist", "prod", name))
+	} else {
+		return embedFS.Open(path.Join("ui", "dist", "prod-no-ga", name))
+	}
 }
 
 var UI = http.FileServer(http.FS(UIFS))
