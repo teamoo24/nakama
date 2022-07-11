@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod && ng build --configuration=production-no-ga",
-    "postbuild": "mv dist/prod/*.js dist/prod/*.css dist/prod/*.txt dist/prod/static/ && mv dist/prod-no-ga/*.js dist/prod-no-ga/*.css dist/prod-no-ga/*.txt dist/prod-no-ga/static/",
+    "build": "ng build --prod && ng build --configuration=production-nt",
+    "postbuild": "mv dist/prod/*.js dist/prod/*.css dist/prod/*.txt dist/prod/static/ && mv dist/prod-nt/*.js dist/prod-nt/*.css dist/prod-nt/*.txt dist/prod-nt/static/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
