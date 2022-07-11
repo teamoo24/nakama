@@ -93,7 +93,7 @@ export class BaseComponent implements OnInit, OnDestroy {
       }
       return true;
     })).subscribe((nav: NavigationEnd) => {
-      if (nav && environment.telemetry) {
+      if (nav && !environment.nt) {
         segment.page(nav.url);
       }
     });

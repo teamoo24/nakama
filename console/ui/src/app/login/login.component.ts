@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (environment.telemetry) {
+    if (!environment.nt) {
       this.segment.page('/login');
     }
     this.loginForm = this.formBuilder.group({

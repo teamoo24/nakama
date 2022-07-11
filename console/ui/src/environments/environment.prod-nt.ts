@@ -16,5 +16,5 @@ export const environment = {
   production: true,
   segment_write_key: '',
   apiBaseUrl: '',
-  telemetry: false
+  nt: true
 };

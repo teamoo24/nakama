@@ -100,7 +100,7 @@ import {GroupMembersComponent} from './group/members/groupMembers.component';
     HttpClientModule,
     NgbModule,
     NgxChartsModule,
-    SegmentModule.forRoot({ apiKey: environment.segment_write_key, debug: !environment.production, loadOnInitialization: environment.telemetry }),
+    SegmentModule.forRoot({ apiKey: environment.segment_write_key, debug: !environment.production, loadOnInitialization: !environment.nt }),
     NoopAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
